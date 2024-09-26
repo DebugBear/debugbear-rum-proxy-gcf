@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon dev.js",
     "check-env-vars-present": "node envVars.js",
-    "deploy": "npm run check-env-vars-present && gcloud functions deploy debugbearrumproxy --gen2 --allow-unauthenticated --memory 2Gi --region=europe-west1 --timeout 60s --runtime nodejs20 --trigger-http"
+    "deploy": "npm run check-env-vars-present && gcloud functions deploy debugbearrumproxy --gen2 --allow-unauthenticated --memory 2Gi --region=europe-west1 --concurrency=15 --timeout 15s --runtime nodejs20 --trigger-http"
   },
   "author": "",
   "license": "MIT",
