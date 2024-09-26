@@ -81,7 +81,7 @@ async function processRumData(req, res) {
 }
 
 function getCountryFromRequest(req) {
-  let country = req.headers["x-country"];
+  let country = req.headers["x-rum-country"];
   if (!country) {
     const requestIp = (req.headers["x-forwarded-for"] || "").split(",")[0];
     country = ip3country.lookupStr(requestIp);
