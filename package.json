@@ -1,0 +1,20 @@
+{
+  "name": "debugbear-rum-proxy-gcf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon dev.js",
+    "deploy": "gcloud functions deploy debugbearrumproxy --gen2 --allow-unauthenticated --memory 2Gi --region=europe-west1 --timeout 60s --runtime nodejs20 --trigger-http"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "ip3country": "^5.0.0"
+  },
+  "devDependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  }
+}
