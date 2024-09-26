@@ -24,6 +24,17 @@ You can then deploy the cloud function like this:
 RUM_SNIPPET_ID=abcd RUM_TOKEN=efgh npm run deploy
 ```
 
+## What to do after deployment
+
+After deploying the `debugbearrumproxy` cloud function you can open it in your Google Cloud Console. Here you'll find the function URL.
+
+To proceed with your RUM integration, you can either use the URL directly or load the RUM script from your own domain using a load balancer.
+
+To complete the setup you need to:
+
+1. Open the RUM proxy settings in your DebugBear account and set the "Data Endpoint" to the proxy URL
+2. Embed the script on your website, for example using `<script async src={{PROXY_URL}}></script>`
+
 ## Service account and other cloud function options
 
 This cloud function requires no access to any internal resources on your cloud environment. We recommend deploying it with a restricted service account.
