@@ -1,15 +1,8 @@
 const axios = require("axios")
 const ip3country = require("ip3country");
+const { RUM_SNIPPET_ID, RUM_TOKEN } = require("./envVars");
 
-const RUM_TOKEN = process.env.RUM_TOKEN;
-const RUM_SNIPPET_ID = process.env.RUM_SNIPPET_ID
 
-if (!RUM_TOKEN) {
-  throw Error("RUM_TOKEN environment variable is required")
-}
-if (!RUM_SNIPPET_ID) {
-  throw Error("RUM_SNIPPET_ID environment variable is required")
-}
 
 const snippetUrl = `https://cdn.debugbear.com/${RUM_SNIPPET_ID}.js`
 ip3country.init();
