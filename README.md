@@ -11,6 +11,10 @@ The proxy:
 - Serves the JavaScript analytics snippet
 - Receives page view analytics and forwards them to the DebugBear server
 
+## Getting started with the proxy
+
+Clone this GitHub repository and then run `npm install`.
+
 ## Deployment and environment variables
 
 To deploy this function you first need to identify two values for your application:
